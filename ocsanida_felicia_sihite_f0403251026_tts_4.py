@@ -16,3 +16,21 @@ if __name__ == "__main__":
     data = [120, 85, 200, 150]
     total = hitung_total_panen(data)
     print(f"Total hasil panen: {total} kg")
+    def hitung_total_panen(hasil_panen):
+    """Menghitung total hasil panen (dalam kg)."""
+    return sum(hasil_panen)
+
+
+def hitung_diskon(total_harga, persen_diskon):
+    """Menghitung harga setelah diskon."""
+    potongan = total_harga * persen_diskon / 100
+    return total_harga - potongan
+
+
+if __name__ == "__main__":
+    data = [120, 85, 200, 150]
+    total = hitung_total_panen(data)
+    print(f"Total hasil panen: {total} kg")
+
+    harga = total * 10000
+    print(f"Harga setelah diskon 10%: Rp{hitung_diskon(harga, 10):,.0f}")
